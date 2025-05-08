@@ -1,10 +1,15 @@
-import React from 'react'
+import Header from '@/components/Header'
+import React, { ReactNode } from 'react'
 
-const layout = () => {
+const layout = async ({ children } : { children: ReactNode}) => {
   return (
-    <div>
-       layout
-    </div>
+    <main className='root-container'>
+        <div className='mx-auto max-w-7xl'>
+            <Header />
+            <div className='mt-20 pb-20'>{ children }</div>
+        </div>
+
+    </main>
   )
 }
 
